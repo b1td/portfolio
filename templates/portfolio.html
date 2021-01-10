@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Портфолио{% endblock title %}
+{% block content %}
+
+
+  <!-- <img src="{% static 'images/spot.svg' %}" alt="" class="spot projects-spot wow fadeScale"
+    data-wow-delay="0.6s"> -->
+
+  <section class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item"><a href="/">Главная</a></li>
+        <li class="breadcrumbs-item breadcrumbs-item_active">Портфолио</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects text-left">
+    <div class="container">
+      <h2 class="title project-title">Реализованные проекты<span>.</span></h2>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="projects-item__name"><span>Интернет-магазин</span> с административной панелью Safepoint-shop</p>
+          <div class="projects-item">
+            <a href="https://safepoint-shop.com/" class="projects-item__ref">
+              <img src="{% static 'images/project1.png' %}" alt="Реализованный проект">
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="projects-item__name"><span>Сайт-визитка</span> с административной панелью Reynolds, Lake Oconee
+          </p>
+          <div class="projects-item">
+            <a href="https://www.reynoldslakeoconee.com/" class="projects-item__ref">
+              <img src="{% static 'images/project2.png' %}" alt="Реализованный проект">
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+{% include 'footer.html' %}
+{% endblock %}

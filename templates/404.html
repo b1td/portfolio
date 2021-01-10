@@ -1,0 +1,27 @@
+  <!-- Mobile Specific Meta -->
+    <!-- <meta name="msapplication-TileColor" content="#75c0ff9c"> -->
+    <!-- <meta name="theme-color" content="#75c0ff9c"> -->
+
+	<!-- Meta Description -->
+	<!-- <meta name="description" content="Организовываем максимально комфортный и прозрачный процесс разработки. На вашем проекте будет работать команда, состоящая из маркетолога, веб-аналитика, UX/UI дизайнера, верстальщика и программиста, а во главе будет персональный менеджер проекта"> -->
+	<!-- Meta Keyword -->
+	<!-- <meta name="keywords" content="веб, студия, сайт, приложение, мобильное, бизнес, консалтинг, разработка, техническое задание, создание, портфолио, информационная, система, ERP, CRM, Python, PHP, Python, Django, Framework, Джанго, HTML, CSS, JS, javascript, Yii, конструктор, CMS, joomla, wordpress, opencart"> -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}404{% endblock title %}
+
+
+
+{% block content %}
+     
+    <section class="services-main text-left" >
+        <div style = "text-align:center;">
+          
+            <h2 class="title">Упс<span>...</span>Страница не найдена</h2>
+              <div>
+                <img src="{% static 'images/404_page_not_found_.svg' %}" alt="Akit 404" style = "width: 45%;" data-wow-delay="0.6s">
+              </div>
+        </div>
+    </section>
+
+{% endblock %}

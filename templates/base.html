@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="ru">
+{% spaceless %}
+    <head>
+        <title>{% block title %} {% endblock title %}</title>
+        <!-- Meta Description -->
+        <meta name="description" content="{% block description %} {% endblock description %}">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="{% block keywords %} {% endblock keywords %}">
+        {% include "meta.html" %}
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+        <style>
+            .ie-panel {
+                display: none;
+                background: #212121;
+                padding: 10px 0;
+                box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+                clear: both;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+            }
+
+            html.ie-10 .ie-panel,
+            html.lt-ie-10 .ie-panel {
+                display: block;
+            }
+
+
+            /* Preloader */
+            .preloader {
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 10000;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 20px;
+                background: #181818;
+                -webkit-transition: .3s all ease;
+                -o-transition: .3s all ease;
+                transition: .3s all ease;
+            }
+
+            .preloader * {
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+            .preloader.loaded {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .preloader-body {
+                text-align: center;
+            }
+
+            .preloader-body p {
+                position: relative;
+                right: -8px;
+            }
+
+            .cssload-bell {
+                width: 97px;
+                height: 99px;
+                border-radius: 100%;
+            }
+
+            .cssload-circle {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+            .cssload-circle .cssload-inner {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                border: 5px solid #e75d48;
+                border-right: none;
+                border-top: none;
+                background-clip: padding;
+                -webkit-box-shadow: inset 0 0 10px #b63f3b;
+                box-shadow: inset 0 0 10px #b63f3b;
+            }
+
+            .cssload-circle:nth-of-type(0) {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            .cssload-circle:nth-of-type(0) .cssload-inner {
+                -webkit-animation: cssload-spin 2.3s infinite linear;
+                animation: cssload-spin 2.3s infinite linear;
+            }
+
+            .cssload-circle:nth-of-type(1) {
+                -webkit-transform: rotate(70deg);
+                -ms-transform: rotate(70deg);
+                transform: rotate(70deg);
+            }
+
+            .cssload-circle:nth-of-type(1) .cssload-inner {
+                -webkit-animation: cssload-spin 2.3s infinite linear;
+                animation: cssload-spin 2.3s infinite linear;
+            }
+
+            .cssload-circle:nth-of-type(2) {
+                -webkit-transform: rotate(140deg);
+                -ms-transform: rotate(140deg);
+                transform: rotate(140deg);
+            }
+
+            .cssload-circle:nth-of-type(2) .cssload-inner {
+                -webkit-animation: cssload-spin 2.3s infinite linear;
+                animation: cssload-spin 2.3s infinite linear;
+            }
+
+            .cssload-bell {
+                -webkit-animation: cssload-spin 5.75s infinite linear;
+                animation: cssload-spin 5.75s infinite linear;
+            }
+
+            @-webkit-keyframes cssload-spin {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes cssload-spin {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+            src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820"
+            alt="Client intelligent loyal. Наши услуги: сайты, мобильные приложения, брендинг и айдентика, IT-консалтинг."></a>
+        </div>
+
+        <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-bell">
+            <div class="cssload-circle">
+                <div class="cssload-inner"></div>
+            </div>
+            <div class="cssload-circle">
+                <div class="cssload-inner"></div>
+            </div>
+            <div class="cssload-circle">
+                <div class="cssload-inner"></div>
+            </div>
+            <div class="cssload-circle">
+                <div class="cssload-inner"></div>
+            </div>
+            <div class="cssload-circle">
+                <div class="cssload-inner"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="page">
+            <!-- Page Header-->
+            {% include 'header.html' %}
+    
+            <!-- Form "Contact us" -->
+            {% include 'contact_us_form.html' %}
+
+            {% block content %}
+
+            {% endblock %}
+            <!-- Footer -->
+        </div>
+        <div class="snackbars" id="form-output-global"></div>
+
+        {% include "link_style.html" %}
+        {% include 'scripts.html' %}
+
+    </body>
+
+</html>
+
+{% endspaceless %}
+

@@ -1,0 +1,29 @@
+    <!-- Form "Submit your request" -->
+    <div class="overlay overlay-request"></div>
+    <div class="popup popup-request">
+      <div class="popup-close popup-close-request"></div>
+      <h2 class="title">Оставьте заявку</h2>
+      <p class="form-subtitle">
+        Расскажите нам о своем проекте и задайте вопросы
+        — мы свяжемся с Вами в ближайшее время
+      </p>
+      <form action="{% url 'order:feedback' %}" method="POST" class="form">
+        {% csrf_token %}
+        <input type="text" placeholder="Имя" name="name">
+        <input type="tel" placeholder="Телефон" name="phone">
+        <input type="email" placeholder="Электронная почта" name="user-email">
+        <textarea placeholder="Опишите вашу задачу" name="description" rows="3"></textarea>
+        <div class="form-submit">
+          <button type="submit" class="button button-color m-0">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup-request-thanks">
+      <div class="popup-close popup-close-request"></div>
+      <h2 class="title">Спасибо<span>!</span></h2>
+      <p class="form-subtitle">
+        Ваша заявка отправлена — я свяжусь
+        с Вами в ближайшее время
+      </p>
+    </div>

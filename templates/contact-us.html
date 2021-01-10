@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}Akita | Контакты{% endblock title %}
+
+
+{% block content %}
+
+  <section class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item"><a href="/">Главная</a></li>
+        <li class="breadcrumbs-item breadcrumbs-item_active">Контакты</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--Сontacts main section-->
+  <section class="contacts-main text-left">
+    <div class="container">
+      <div class="row align-items-center justify-content-center justify-content-xl-between">
+        <div class="col-sm-12 col-md-6">
+          <div class="contacts-main__wrap">
+            <h2 class="title">{% trans 'Свяжитесь со мной' %}<span>.</span></h2>
+            <p class="contacts-main__subtitle">{% trans 'Задайте Ваш вопрос — я отвечу на него в ближайшее время' %}</p>
+            <form action="#" method="POST" class="form">
+              {% csrf_token %}
+              {% for field in form %}
+                {{ field }}
+              {% endfor %}
+              <!-- <input type="text" placeholder="Имя" name="name">
+              <input type="tel" placeholder="Телефон" name="phone">
+              <input type="email" placeholder="Электронная почта" name="user-email">
+              <textarea placeholder="Опишите вашу задачу" name="description" rows="3"></textarea> -->
+              <div class="form-submit">
+                <button type="submit" class="button button-primary m-0">{% trans 'Связаться с нами' %}</button>
+                <!-- <small class="form-agreement">{% trans 'Нажав на кнопку, соглашаюсь на обработку <a href="https://it-akita.com/privacy/">персональных данных' %}</a></small> -->
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{% static 'images/contact-img.svg' %}" alt="Контакты Akita">
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+{% block title %}Обо мне{% endblock title %}
+
+{% block content %}
+
+    <section class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item"><a href="/">Главная</a></li>
+          <li class="breadcrumbs-item breadcrumbs-item_active">О нас</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reason -->
+    <section class="reason text-left">
+      <div class="container">
+        <div class="reason-wrap">
+          <div class="row align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-sm-12 col-md-6">
+              <h2 class="title reason-title">{% trans 'Обо мне' %}<span>.</span></h2>
+                <p class="reason-text">{% trans 'С 2017 года берусь за амбициозные западные и российские проекты со сложными бизнес-процессами, объемными базами данных и высокой нагрузкой.' %}</p>
+            </div>
+            <div class="col-sm-12 col-md-6 text-md-right">
+              <img src="{% static 'images/spot.svg' %}" alt="Обо мне" class="reason-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+{% endblock %}

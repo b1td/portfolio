@@ -1,0 +1,33 @@
+
+<div class="overlay overlay-contact"></div>
+  <div class="popup popup-contact">
+      <div class="popup-close popup-close-contact"></div>
+
+      <h2 class="title">Свяжитесь с нами</h2>
+      <p class="form-subtitle">
+        Задайте Ваш вопрос — мы ответим
+        на него в ближайшее время
+      </p>
+
+      <form action="{% url 'order:feedback' %}" method="POST" class="form">
+        {% csrf_token %}
+        <input type="text" placeholder="Имя" name="name">
+        <input type="tel" placeholder="Телефон" name="phone">
+        <input type="email" placeholder="Электронная почта" name="email">
+        <textarea placeholder="Ваш вопрос" name="description" rows="3"></textarea>
+        <div class="form-submit">
+          <button type="submit" class="button button-color m-0">Связаться с нами</button>
+          <!-- <small class="form-agreement">Нажав на кнопку, Вы соглашаетесь на обработку
+            <a href="https://it-akita.com/privacy/">персональных данных</a></small> -->
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup-contact-thanks">
+      <div class="popup-close popup-close-contact"></div>
+      <h2 class="title">Спасибо<span>!</span></h2>
+      <p class="form-subtitle">
+        Ваша вопрос отправлен — мы свяжемся
+        с Вами в ближайшее время
+      </p>
+    </div>

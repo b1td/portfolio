@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+{% block title %}Главная{% endblock title %}
+
+{% block description %}Разработка сайтов любой сложности: от одностраничного до интернет-магазина {% endblock description %}
+{% block keywords %} веб, студия, сайт, приложение, мобильное, бизнес, консалтинг, разработка, техническое задание, создание, портфолио, информационная, система, ERP, CRM, Python, PHP, Python, Django, Framework, Джанго, HTML, CSS, JS, javascript, Yii, конструктор, CMS, joomla, wordpress, opencart {% endblock keywords %}
+
+{% block content %}
+
+      <!-- Main section-->
+      <section class="section main text-left">
+        <img src="{% static 'images/main-spot.svg' %}" alt="main" class="main-spot">
+        <div class="container">
+          <div class="row row-30 align-items-center justify-content-center justify-content-xl-between" style="text-align: center;">
+            <div class="col-sm-12 col-md-12 col-xl-12" style="top: -35px;">
+              <strong class="main-motto text-primary title">LOVE CLEAN CODE<span>.</span></strong>
+              <p class="line-1 anim-typewriter">Создание сайтов</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+{% endblock %}

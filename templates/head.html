@@ -1,0 +1,45 @@
+{% load static %}
+<head>
+    <title>{% if flatpage.title %}{{ flatpage.title }} {% else %} {% block title %} {% endblock title %} {% endif %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Веб-студия IT-Akita. Наша команда разработает для Вас веб-сайты и приложения, которые войдут в основу Вашего бизнеса.">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="веб, студия, сайт, приложение, мобильное, бизнес, консалтинг, разработка, техническое задание, создание, портфолио, информационная, система, ERP, CRM, Python, PHP, Python, Django, Framework, Джанго, HTML, CSS, JS, javascript, Yii, конструктор, CMS, joomla, wordpress, opencart">
+      
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#75c0ff9c">
+    <meta name="theme-color" content="#75c0ff9c">
+    
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@400;500;700;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" id="main-styles-link">
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+  
+      html.ie-10 .ie-panel,
+      html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+
+  <script src="//code-ya.jivosite.com/widget/CemsIMpVCM" async></script>
+  </head>
