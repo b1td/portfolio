@@ -29,7 +29,6 @@ urlpatterns = [
     path('', include(('main.urls', 'main'), namespace = 'main')),
     path('', include(('portfolio.urls', 'portfolio'), namespace = 'portfolio')),
     path('', include(('order.urls', 'order'), namespace = 'order')),
-    path('blog/', include(('blog.urls', 'blog'), namespace = 'blog')),
     path('summernote/', include('django_summernote.urls')),
 ]
 

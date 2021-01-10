@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'main',
     'portfolio',
     'order',
-    'blog',
 ]
 
 MIDDLEWARE = [
